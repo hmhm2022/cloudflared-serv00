@@ -86,7 +86,7 @@ uninstall() {
     echo "正在卸载 cloudflared..."
     pkill -f cloudflared-freebsd
     rm -f ${HOME_DIR}/cloudflared-freebsd ${HOME_DIR}/start_cloudflared.sh ${LOG_FILE}
-    crontab -l 2>/dev/null | grep -v "@reboot ${HOME_DIR}/start_cloudflared.sh" | crontab -
+    crontab -l 2>/dev/null | grep -v "@reboot cd ${HOME_DIR} && bash start_cloudflared.sh" | crontab -
     echo "cloudflared 已卸载。"
 }
 
