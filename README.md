@@ -1,6 +1,4 @@
-serv00-cloudflared
-
-✨  一个用于在Serv00 上安装 Cloudflare Tunnel 的脚本
+✨  cloudflared-serv00 一个用于在Serv00 上安装 Cloudflare Tunnel 的脚本
 
 功能： 在serv00上 安装、卸载 Cloudflare Tunnel 并支持重启保活
 
