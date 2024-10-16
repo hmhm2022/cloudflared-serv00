@@ -43,7 +43,7 @@ get_and_verify_token() {
         fi
         
         echo "正在验证 token..."
-        ${HOME_DIR}/cloudflared-freebsd tunnel --edge-ip-version auto --protocol http2 --no-autoupdate run --token $ARGO_AUTH > /dev/null 2>&1 &
+        ${HOME_DIR}/cloudflared-freebsd tunnel --edge-ip-version auto --protocol http3 --no-autoupdate run --token $ARGO_AUTH > /dev/null 2>&1 &
         CLOUDFLARED_PID=$!
         sleep 5
         
@@ -69,7 +69,7 @@ rotate_log() {
     fi
 }
 rotate_log
-TZ='Asia/Shanghai' nohup ${HOME_DIR}/cloudflared-freebsd tunnel --edge-ip-version auto --protocol http2 --no-autoupdate run --token $ARGO_AUTH >> ${LOG_FILE} 2>&1 &
+TZ='Asia/Shanghai' nohup ${HOME_DIR}/cloudflared-freebsd tunnel --edge-ip-version auto --protocol http3 --no-autoupdate run --token $ARGO_AUTH >> ${LOG_FILE} 2>&1 &
 EOF
     chmod +x ${HOME_DIR}/start_cloudflared.sh || { echo "创建启动脚本失败"; exit 1; }
     echo "启动脚本start_cloudflared.sh已创建。"
