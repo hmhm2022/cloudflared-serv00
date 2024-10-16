@@ -1,9 +1,9 @@
-✨ cloudflared-serv00: a script to install Cloudflare Tunnel on Serv00
+✨ **cloudflared-serv00:** a script to install Cloudflare Tunnel on Serv00
 
-Function:
-• Installs and uninstalls Cloudflare Tunnel and manages Cron jobs on the Serv00.
+**Function:**
+- Installs and uninstalls Cloudflare Tunnel and manages Cron jobs on the Serv00.
 
-Usage:
+**Usage:**
 1. Login to Cloudflare Zero Trust --> Networks --> Tunnels --> Create a tunnel --> Cloudflared
 
 2. Run the script on your VPS:
