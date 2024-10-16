@@ -1,18 +1,18 @@
-✨  cloudflared-serv00 一个用于在Serv00 上安装 Cloudflare Tunnel 的脚本
+✨ cloudflared-serv00: a script to install Cloudflare Tunnel on Serv00
 
-功能： 在serv00上 安装、卸载 Cloudflare Tunnel 并管理Cron job
+Function:
+• Installs and uninstalls Cloudflare Tunnel and manages Cron jobs on the Serv00.
 
-使用：
+Usage:
+1. Login to Cloudflare Zero Trust --> Networks --> Tunnels --> Create a tunnel --> Cloudflared
 
-1、登录Cloudflare， Zero Trust——> Networks ——> Tunnel,  点击 Create a tunnel 选择Cloudflared 获取token
+2. Run the script on your VPS:
+```🐚
+curl -O https://raw.githubusercontent.com/X-49/cloudflared-serv00/dev/install_cloudflared.sh && chmod +x install_cloudflared.sh && ./install_cloudflared.sh
+```
+3. According to the prompts, enter the Cloudflared tunnel token you received. Settings to start the tunnel and Cron jobs will be added automatically.
 
-2、运行脚本：
-
-    curl -O https://raw.githubusercontent.com/hmhm2022/cloudflared-serv00/main/install_cloudflared.sh && chmod +x install_cloudflared.sh && ./install_cloudflared.sh
-    
-
-3、根据提示，输入token ，完成配置启动隧道，并添加Cron job。
-
-4、执行以下指令删除隧道和Cron job。
-
-    bash install_cloudflared.sh uninstall
+4. Execute the following command to delete the tunnel and Cron job:
+```🐚
+bash install_cloudflared.sh uninstall
+```
